@@ -8,6 +8,10 @@ local clicktp = Instance.new("TextButton")
 local noclip = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
 local aimlock = Instance.new("TextButton")
+local Credits = Instance.new("TextButton")
+local anims = Instance.new("TextButton")
+local AnimsTab = Instance.new("Frame")
+local CreditsTab = Instance.new("Frame")
 
 --Properties:
 
@@ -16,8 +20,8 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
-Frame.Position = UDim2.new(0.106615551, 0, 0.144212529, 0)
-Frame.Size = UDim2.new(0, 476, 0, 300)
+Frame.Position = UDim2.new(0.0775621235, 0, 0.144212529, 0)
+Frame.Size = UDim2.new(0, 676, 0, 300)
 Frame.Active = true
 Frame.Draggable = true
 
@@ -234,3 +238,64 @@ aimlock.TextWrapped = true
 aimlock.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/coolmanstrongsuperman/lol/main/TheWare"))()
 end)
+
+Credits.Name = "Credits"
+Credits.Parent = Frame
+Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits.Position = UDim2.new(0.670306981, 0, 0, 0)
+Credits.Size = UDim2.new(0, 224, 0, 53)
+Credits.Font = Enum.Font.SourceSans
+Credits.Text = "Credits"
+Credits.TextColor3 = Color3.fromRGB(0, 0, 0)
+Credits.TextScaled = true
+Credits.TextSize = 14.000
+Credits.TextWrapped = true
+
+anims.Name = "anims"
+anims.Parent = Frame
+anims.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+anims.Position = UDim2.new(0.337466687, 0, 0, 0)
+anims.Size = UDim2.new(0, 225, 0, 53)
+anims.Font = Enum.Font.SourceSans
+anims.Text = "Anims"
+anims.TextColor3 = Color3.fromRGB(0, 0, 0)
+anims.TextScaled = true
+anims.TextSize = 14.000
+anims.TextWrapped = true
+
+AnimsTab.Name = "AnimsTab"
+AnimsTab.Parent = ScreenGui
+AnimsTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AnimsTab.BackgroundTransparency = 1.000
+AnimsTab.Position = UDim2.new(0.289597005, 0, 0.242884248, 0)
+AnimsTab.Size = UDim2.new(0, 449, 0, 248)
+AnimsTab.Visible = false
+
+CreditsTab.Name = "CreditsTab"
+CreditsTab.Parent = ScreenGui
+CreditsTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditsTab.BackgroundTransparency = 1.000
+CreditsTab.Position = UDim2.new(0.289597005, 0, 0.242884248, 0)
+CreditsTab.Size = UDim2.new(0, 449, 0, 248)
+CreditsTab.Visible = false
+
+-- Scripts:
+
+local function VEIVU_fake_script() -- Credits.LocalScript 
+	local script = Instance.new('LocalScript', Credits)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.CreditsTab.Visible = true
+		script.Parent.Parent.AnimsTab.Visible = false
+	end)
+end
+coroutine.wrap(VEIVU_fake_script)()
+local function FTTSG_fake_script() -- anims.LocalScript 
+	local script = Instance.new('LocalScript', anims)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.AnimsTab.Visible = true
+		script.Parent.Parent.CreditsTab.Visible = false
+	end)
+end
+coroutine.wrap(FTTSG_fake_script)()
