@@ -1,0 +1,220 @@
+
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local fly = Instance.new("TextButton")
+local fistreach = Instance.new("TextButton")
+local clicktp = Instance.new("TextButton")
+local noclip = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
+Frame.Position = UDim2.new(0.106615551, 0, 0.144212529, 0)
+Frame.Size = UDim2.new(0, 227, 0, 297)
+Frame.Active = true
+Frame.Draggable = true
+
+fly.Name = "fly"
+fly.Parent = Frame
+fly.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fly.Position = UDim2.new(0.000950416201, 0, 0.177536696, 0)
+fly.Size = UDim2.new(0, 227, 0, 49)
+fly.Font = Enum.Font.SourceSans
+fly.Text = "Fly (x)"
+fly.TextColor3 = Color3.fromRGB(0, 0, 0)
+fly.TextScaled = true
+fly.TextSize = 14.000
+fly.TextWrapped = true
+fly.MouseButton1Down:connect(function()
+	local plr = game.Players.LocalPlayer
+	local mouse = plr:GetMouse()
+
+	localplayer = plr
+
+	if workspace:FindFirstChild("Core") then
+		workspace.Core:Destroy()
+	end
+
+	local Core = Instance.new("Part")
+	Core.Name = "Core"
+	Core.Size = Vector3.new(0.05, 0.05, 0.05)
+
+	spawn(function()
+		Core.Parent = workspace
+		local Weld = Instance.new("Weld", Core)
+		Weld.Part0 = Core
+		Weld.Part1 = localplayer.Character.LowerTorso
+		Weld.C0 = CFrame.new(0, 0, 0)
+	end)
+
+	workspace:WaitForChild("Core")
+
+	local torso = workspace.Core
+	flying = true
+	local speed=10
+	local keys={a=false,d=false,w=false,s=false}
+	local e1
+	local e2
+	local function start()
+		local pos = Instance.new("BodyPosition",torso)
+		local gyro = Instance.new("BodyGyro",torso)
+		pos.Name="EPIXPOS"
+		pos.maxForce = Vector3.new(math.huge, math.huge, math.huge)
+		pos.position = torso.Position
+		gyro.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+		gyro.cframe = torso.CFrame
+		repeat
+			wait()
+			localplayer.Character.Humanoid.PlatformStand=true
+			local new=gyro.cframe - gyro.cframe.p + pos.position
+			if not keys.w and not keys.s and not keys.a and not keys.d then
+				speed=5
+			end
+			if keys.w then
+				new = new + workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+				speed=speed+0
+			end
+			if keys.s then
+				new = new - workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+				speed=speed+0
+			end
+			if keys.d then
+				new = new * CFrame.new(speed,0,0)
+				speed=speed+0
+			end
+			if keys.a then
+				new = new * CFrame.new(-speed,0,0)
+				speed=speed+0
+			end
+			if speed>10 then
+				speed=5
+			end
+			pos.position=new.p
+			if keys.w then
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(-math.rad(speed*0),0,0)
+			elseif keys.s then
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(math.rad(speed*0),0,0)
+			else
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame
+			end
+		until flying == false
+		if gyro then gyro:Destroy() end
+		if pos then pos:Destroy() end
+		flying=false
+		localplayer.Character.Humanoid.PlatformStand=false
+		speed=10
+	end
+	e1=mouse.KeyDown:connect(function(key)
+		if not torso or not torso.Parent then flying=false e1:disconnect() e2:disconnect() return end
+		if key=="w" then
+			keys.w=true
+		elseif key=="s" then
+			keys.s=true
+		elseif key=="a" then
+			keys.a=true
+		elseif key=="d" then
+			keys.d=true
+		elseif key=="x" then
+			if flying==true then
+				flying=false
+			else
+				flying=true
+				start()
+			end
+		end
+	end)
+	e2=mouse.KeyUp:connect(function(key)
+		if key=="w" then
+			keys.w=false
+		elseif key=="s" then
+			keys.s=false
+		elseif key=="a" then
+			keys.a=false
+		elseif key=="d" then
+			keys.d=false
+		end
+	end)
+	start()
+end)
+
+fistreach.Name = "fistreach"
+fistreach.Parent = Frame
+fistreach.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fistreach.Position = UDim2.new(0.000950416201, 0, 0.344092727, 0)
+fistreach.Size = UDim2.new(0, 227, 0, 49)
+fistreach.Font = Enum.Font.SourceSans
+fistreach.Text = "Fist Reach"
+fistreach.TextColor3 = Color3.fromRGB(0, 0, 0)
+fistreach.TextScaled = true
+fistreach.TextSize = 14.000
+fistreach.TextWrapped = true
+fistreach.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://pastebin.com/raw/aZHK690D'))()
+end)
+
+clicktp.Name = "clicktp"
+clicktp.Parent = Frame
+clicktp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+clicktp.Position = UDim2.new(0.000950416201, 0, 0.507398427, 0)
+clicktp.Size = UDim2.new(0, 227, 0, 49)
+clicktp.Font = Enum.Font.SourceSans
+clicktp.Text = "Click tp (q)"
+clicktp.TextColor3 = Color3.fromRGB(0, 0, 0)
+clicktp.TextScaled = true
+clicktp.TextSize = 14.000
+clicktp.TextWrapped = true
+clicktp.MouseButton1Down:connect(function()
+local	plr = game.Players.LocalPlayer
+
+local	hum = plr.Character.HumanoidRootPart
+
+local	mouse = plr:GetMouse()
+
+
+
+	mouse.KeyDown:connect(function(key)
+
+		if key == "q" then
+
+			if mouse.Target then
+
+				hum.CFrame = CFrame.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z)
+
+			end
+
+		end
+	end)
+end)
+
+noclip.Name = "noclip"
+noclip.Parent = Frame
+noclip.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+noclip.Position = UDim2.new(0.000950416201, 0, 0.67123729, 0)
+noclip.Size = UDim2.new(0, 227, 0, 49)
+noclip.Font = Enum.Font.SourceSans
+noclip.Text = "Noclip"
+noclip.TextColor3 = Color3.fromRGB(0, 0, 0)
+noclip.TextScaled = true
+noclip.TextSize = 14.000
+noclip.TextWrapped = true
+noclip.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://pastebin.com/raw/1Ax1bQ5Z'))()
+end)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
+TextLabel.BorderColor3 = Color3.fromRGB(85, 0, 127)
+TextLabel.Position = UDim2.new(-0.000193422806, 0, 4.45890109e-05, 0)
+TextLabel.Size = UDim2.new(0, 228, 0, 53)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Fuck you Hub"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
