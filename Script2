@@ -1,0 +1,267 @@
+
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local Credits = Instance.new("TextLabel")
+local noclip = Instance.new("TextButton")
+local fly = Instance.new("TextButton")
+local aimlock = Instance.new("TextButton")
+local Frame_2 = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
+Frame.Position = UDim2.new(0.117862031, 0, 0.170777977, 0)
+Frame.Size = UDim2.new(0, 725, 0, 300)
+
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
+Title.BorderColor3 = Color3.fromRGB(85, 0, 127)
+Title.Position = UDim2.new(-0.00157655915, 0, -0.00328875217, 0)
+Title.Size = UDim2.new(0, 248, 0, 53)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "Legit Hub"
+Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.Position = UDim2.new(0.357581705, 0, 0.615902543, 0)
+TextLabel.Size = UDim2.new(0, 206, 0, 43)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "https://www.roblox.com/groups/7238207/E-hang-out#!/about"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 25.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.Position = UDim2.new(0.35709098, 0, 0.502586961, 0)
+TextLabel_2.Size = UDim2.new(0, 206, 0, 34)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Join Crew Cuz Why Not"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 14.000
+
+TextLabel_3.Parent = Frame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.Position = UDim2.new(0.354823083, 0, 0.340000004, 0)
+TextLabel_3.Size = UDim2.new(0, 206, 0, 50)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "https://www.youtube.com/channel/UCOnD98PGeYrk6JOZK6tFLUg"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextSize = 16.000
+TextLabel_3.TextWrapped = true
+
+TextLabel_4.Parent = Frame
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.Position = UDim2.new(0.357472569, 0, 0.176166996, 0)
+TextLabel_4.Size = UDim2.new(0, 206, 0, 50)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = "Hello Im Iza Or Daily Scripts on Youtube"
+TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+
+Credits.Name = "Credits"
+Credits.Parent = Frame
+Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits.Position = UDim2.new(0.357581705, 0, 0.0041619367, 0)
+Credits.Size = UDim2.new(0, 206, 0, 52)
+Credits.Font = Enum.Font.SourceSans
+Credits.Text = "Credits"
+Credits.TextColor3 = Color3.fromRGB(0, 0, 0)
+Credits.TextScaled = true
+Credits.TextSize = 14.000
+Credits.TextWrapped = true
+
+noclip.Name = "noclip"
+noclip.Parent = Frame
+noclip.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+noclip.Position = UDim2.new(-0.000428887724, 0, 0.33851409, 0)
+noclip.Size = UDim2.new(0, 247, 0, 49)
+noclip.Font = Enum.Font.SourceSans
+noclip.Text = "Blatent (faded)"
+noclip.TextColor3 = Color3.fromRGB(0, 0, 0)
+noclip.TextScaled = true
+noclip.TextSize = 14.000
+noclip.TextWrapped = true
+noclip.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/NighterEpic/Faded-Grid/main/YesEpic", true))()
+end)
+
+fly.Name = "fly"
+fly.Parent = Frame
+fly.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fly.Position = UDim2.new(0.000950422604, 0, 0.177536726, 0)
+fly.Size = UDim2.new(0, 246, 0, 49)
+fly.Font = Enum.Font.SourceSans
+fly.Text = "Fly (x)"
+fly.TextColor3 = Color3.fromRGB(0, 0, 0)
+fly.TextScaled = true
+fly.TextSize = 14.000
+fly.TextWrapped = true
+fly.MouseButton1Down:connect(function()
+	local plr = game.Players.LocalPlayer
+	local mouse = plr:GetMouse()
+
+	localplayer = plr
+
+	if workspace:FindFirstChild("Core") then
+		workspace.Core:Destroy()
+	end
+
+	local Core = Instance.new("Part")
+	Core.Name = "Core"
+	Core.Size = Vector3.new(0.05, 0.05, 0.05)
+
+	spawn(function()
+		Core.Parent = workspace
+		local Weld = Instance.new("Weld", Core)
+		Weld.Part0 = Core
+		Weld.Part1 = localplayer.Character.LowerTorso
+		Weld.C0 = CFrame.new(0, 0, 0)
+	end)
+
+	workspace:WaitForChild("Core")
+
+	local torso = workspace.Core
+	flying = true
+	local speed=10
+	local keys={a=false,d=false,w=false,s=false}
+	local e1
+	local e2
+	local function start()
+		local pos = Instance.new("BodyPosition",torso)
+		local gyro = Instance.new("BodyGyro",torso)
+		pos.Name="EPIXPOS"
+		pos.maxForce = Vector3.new(math.huge, math.huge, math.huge)
+		pos.position = torso.Position
+		gyro.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+		gyro.cframe = torso.CFrame
+		repeat
+			wait()
+			localplayer.Character.Humanoid.PlatformStand=true
+			local new=gyro.cframe - gyro.cframe.p + pos.position
+			if not keys.w and not keys.s and not keys.a and not keys.d then
+				speed=5
+			end
+			if keys.w then
+				new = new + workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+				speed=speed+0
+			end
+			if keys.s then
+				new = new - workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+				speed=speed+0
+			end
+			if keys.d then
+				new = new * CFrame.new(speed,0,0)
+				speed=speed+0
+			end
+			if keys.a then
+				new = new * CFrame.new(-speed,0,0)
+				speed=speed+0
+			end
+			if speed>10 then
+				speed=5
+			end
+			pos.position=new.p
+			if keys.w then
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(-math.rad(speed*0),0,0)
+			elseif keys.s then
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(math.rad(speed*0),0,0)
+			else
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame
+			end
+		until flying == false
+		if gyro then gyro:Destroy() end
+		if pos then pos:Destroy() end
+		flying=false
+		localplayer.Character.Humanoid.PlatformStand=false
+		speed=10
+	end
+	e1=mouse.KeyDown:connect(function(key)
+		if not torso or not torso.Parent then flying=false e1:disconnect() e2:disconnect() return end
+		if key=="w" then
+			keys.w=true
+		elseif key=="s" then
+			keys.s=true
+		elseif key=="a" then
+			keys.a=true
+		elseif key=="d" then
+			keys.d=true
+		elseif key=="x" then
+			if flying==true then
+				flying=false
+			else
+				flying=true
+				start()
+			end
+		end
+	end)
+	e2=mouse.KeyUp:connect(function(key)
+		if key=="w" then
+			keys.w=false
+		elseif key=="s" then
+			keys.s=false
+		elseif key=="a" then
+			keys.a=false
+		elseif key=="d" then
+			keys.d=false
+		end
+	end)
+	start()
+end)
+
+aimlock.Name = "aimlock"
+aimlock.Parent = Frame
+aimlock.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+aimlock.Position = UDim2.new(-0.000428887724, 0, 0.505056143, 0)
+aimlock.Size = UDim2.new(0, 247, 0, 50)
+aimlock.Font = Enum.Font.SourceSans
+aimlock.Text = "Aimlock"
+aimlock.TextColor3 = Color3.fromRGB(0, 0, 0)
+aimlock.TextScaled = true
+aimlock.TextSize = 14.000
+aimlock.TextWrapped = true
+aimlock.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/coolmanstrongsuperman/lol/main/TheWare"))()
+end)
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.Position = UDim2.new(0.340905666, 0, 0, 0)
+Frame_2.Size = UDim2.new(0, 11, 0, 301)
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.Position = UDim2.new(0.357100487, 0, 0.762158573, 0)
+ImageLabel.Size = UDim2.new(0, 465, 0, 72)
+ImageLabel.Image = "rbxassetid://8887270221"
+
+TextLabel_5.Parent = Frame
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.Position = UDim2.new(0.641379297, 0, 0.00416193623, 0)
+TextLabel_5.Size = UDim2.new(0, 260, 0, 227)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "How to be legit with this: 1. Have Anim Pack in Da hood 2. Use Fly When Nobody Around| Alright Bye And Aimlock Settings Below Here"
+TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextWrapped = true
