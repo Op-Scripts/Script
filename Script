@@ -7,6 +7,7 @@ local fistreach = Instance.new("TextButton")
 local clicktp = Instance.new("TextButton")
 local noclip = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
+local aimlock = Instance.new("TextButton")
 
 --Properties:
 
@@ -16,9 +17,7 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
 Frame.Position = UDim2.new(0.106615551, 0, 0.144212529, 0)
-Frame.Size = UDim2.new(0, 227, 0, 297)
-Frame.Active = true
-Frame.Draggable = true
+Frame.Size = UDim2.new(0, 476, 0, 300)
 
 fly.Name = "fly"
 fly.Parent = Frame
@@ -170,11 +169,11 @@ clicktp.TextScaled = true
 clicktp.TextSize = 14.000
 clicktp.TextWrapped = true
 clicktp.MouseButton1Down:connect(function()
-local	plr = game.Players.LocalPlayer
+	local	plr = game.Players.LocalPlayer
 
-local	hum = plr.Character.HumanoidRootPart
+	local	hum = plr.Character.HumanoidRootPart
 
-local	mouse = plr:GetMouse()
+	local	mouse = plr:GetMouse()
 
 
 
@@ -218,3 +217,18 @@ TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
+
+aimlock.Name = "aimlock"
+aimlock.Parent = Frame
+aimlock.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+aimlock.Position = UDim2.new(0, 0, 0.833333313, 0)
+aimlock.Size = UDim2.new(0, 227, 0, 50)
+aimlock.Font = Enum.Font.SourceSans
+aimlock.Text = "Aimlock"
+aimlock.TextColor3 = Color3.fromRGB(0, 0, 0)
+aimlock.TextScaled = true
+aimlock.TextSize = 14.000
+aimlock.TextWrapped = true
+aimlock.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/coolmanstrongsuperman/lol/main/TheWare"))()
+end)
