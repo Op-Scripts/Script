@@ -1,4 +1,7 @@
+-- Gui to Lua
+-- Version: 3.2
 
+-- Instances:
 
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -8,20 +11,30 @@ local clicktp = Instance.new("TextButton")
 local noclip = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
 local aimlock = Instance.new("TextButton")
-local Credits = Instance.new("TextButton")
-local anims = Instance.new("TextButton")
-local AnimsTab = Instance.new("Frame")
-local CreditsTab = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local Anim = Instance.new("Folder")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextButton_3 = Instance.new("TextButton")
+local TextButton_4 = Instance.new("TextButton")
+local TextButton_5 = Instance.new("TextButton")
+local Anims = Instance.new("TextLabel")
+local Credits = Instance.new("TextLabel")
+local Credits_2 = Instance.new("Folder")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
 
 --Properties:
 
-ScreenGui.Parent = game.CoreGui
+ScreenGui.Parent = game.Workspace
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
-Frame.Position = UDim2.new(0.0775621235, 0, 0.144212529, 0)
-Frame.Size = UDim2.new(0, 676, 0, 300)
+Frame.Position = UDim2.new(0.116924822, 0, 0.155597717, 0)
+Frame.Size = UDim2.new(0, 682, 0, 300)
 Frame.Active = true
 Frame.Draggable = true
 
@@ -37,8 +50,8 @@ fly.TextScaled = true
 fly.TextSize = 14.000
 fly.TextWrapped = true
 fly.MouseButton1Down:connect(function()
-	local plr = game.Players.LocalPlayer
-	local mouse = plr:GetMouse()
+	local plr = game.Players.
+	local mouse = plr:GetMouse()LocalPlayer
 
 	localplayer = plr
 
@@ -239,11 +252,134 @@ aimlock.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/coolmanstrongsuperman/lol/main/TheWare"))()
 end)
 
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.Position = UDim2.new(0.334117442, 0, 0, 0)
+Frame_2.Size = UDim2.new(0, 6, 0, 300)
+
+Anim.Name = "Anim"
+Anim.Parent = Frame
+
+TextButton.Parent = Anim
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.343788743, 0, 0.836167037, 0)
+TextButton.Size = UDim2.new(0, 225, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Werewolf"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Click:Connect(function()
+	local Animate = game.Players.LocalPlayer.Character.Animate
+	
+	Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=1083195517"
+	Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=1083214717"
+	Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=1083178339"
+	Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=1083216690"
+	Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1083218792"
+	Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=1083182000"
+	Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=1083189019"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+TextButton_2.Parent = Anim
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.Position = UDim2.new(0.343788743, 0, 0.669500351, 0)
+TextButton_2.Size = UDim2.new(0, 225, 0, 50)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "Toy"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+TextLabel_2.MouseButton1Click:Connect(function()
+	local Animate = game.Players.LocalPlayer.Character.Animate
+	
+	Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+	Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782845736"
+	Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=782843345"
+	Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=782842708"
+	Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=782847020"
+	Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=782843869"
+	Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=782846423"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+TextButton_3.Parent = Anim
+TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.Position = UDim2.new(0.343788743, 0, 0.502833664, 0)
+TextButton_3.Size = UDim2.new(0, 224, 0, 50)
+TextButton_3.Font = Enum.Font.SourceSans
+TextButton_3.Text = "Astronaut"
+TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.TextScaled = true
+TextButton_3.TextSize = 14.000
+TextButton_3.TextWrapped = true
+TextLabel_3.MouseButton1Click:Connect(function()
+	local Animate = game.Players.LocalPlayer.Character.Animate
+
+	Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=891621366"
+	Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=891633237"
+	Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=891667138"
+	Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=891636393"
+	Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=891627522"
+	Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=891609353"
+	Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=891617961"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+TextButton_4.Parent = Anim
+TextButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.Position = UDim2.new(0.343788743, 0, 0.339500308, 0)
+TextButton_4.Size = UDim2.new(0, 225, 0, 50)
+TextButton_4.Font = Enum.Font.SourceSans
+TextButton_4.Text = "OldSchool"
+TextButton_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_4.TextScaled = true
+TextButton_4.TextSize = 14.000
+TextButton_4.TextWrapped = true
+
+TextButton_5.Parent = Anim
+TextButton_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.Position = UDim2.new(0.343788743, 0, 0.176166996, 0)
+TextButton_5.Size = UDim2.new(0, 225, 0, 50)
+TextButton_5.Font = Enum.Font.SourceSans
+TextButton_5.Text = "Zombie"
+TextButton_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_5.TextScaled = true
+TextButton_5.TextSize = 14.000
+TextButton_5.TextWrapped = true
+TextButton_5.MouseButton1Click:Connect(function()
+	local Animate = game.Players.LocalPlayer.Character.Animate
+
+	Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616158929"
+	Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616160636"
+	Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
+	Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
+	Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616161997"
+	Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616156119"
+	Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616157476"
+	game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+Anims.Name = "Anims"
+Anims.Parent = Frame
+Anims.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Anims.Position = UDim2.new(0.343439043, 0, 0.00416192412, 0)
+Anims.Size = UDim2.new(0, 224, 0, 52)
+Anims.Font = Enum.Font.SourceSans
+Anims.Text = "Anims"
+Anims.TextColor3 = Color3.fromRGB(0, 0, 0)
+Anims.TextScaled = true
+Anims.TextSize = 14.000
+Anims.TextWrapped = true
+
 Credits.Name = "Credits"
 Credits.Parent = Frame
 Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Credits.Position = UDim2.new(0.670306981, 0, 0, 0)
-Credits.Size = UDim2.new(0, 224, 0, 53)
+Credits.Position = UDim2.new(0.671884775, 0, 0.00416192412, 0)
+Credits.Size = UDim2.new(0, 224, 0, 52)
 Credits.Font = Enum.Font.SourceSans
 Credits.Text = "Credits"
 Credits.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -251,51 +387,46 @@ Credits.TextScaled = true
 Credits.TextSize = 14.000
 Credits.TextWrapped = true
 
-anims.Name = "anims"
-anims.Parent = Frame
-anims.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-anims.Position = UDim2.new(0.337466687, 0, 0, 0)
-anims.Size = UDim2.new(0, 225, 0, 53)
-anims.Font = Enum.Font.SourceSans
-anims.Text = "Anims"
-anims.TextColor3 = Color3.fromRGB(0, 0, 0)
-anims.TextScaled = true
-anims.TextSize = 14.000
-anims.TextWrapped = true
+Credits_2.Name = "Credits"
+Credits_2.Parent = Frame
 
-AnimsTab.Name = "AnimsTab"
-AnimsTab.Parent = ScreenGui
-AnimsTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-AnimsTab.BackgroundTransparency = 0.000
-AnimsTab.Position = UDim2.new(0.289597005, 0, 0.242884248, 0)
-AnimsTab.Size = UDim2.new(0, 449, 0, 248)
-AnimsTab.Visible = false
+TextLabel_2.Parent = Credits_2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.Position = UDim2.new(0.673020542, 0, 0.620000005, 0)
+TextLabel_2.Size = UDim2.new(0, 223, 0, 114)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "https://www.roblox.com/groups/7238207/E-hang-out#!/about"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 25.000
+TextLabel_2.TextWrapped = true
 
-CreditsTab.Name = "CreditsTab"
-CreditsTab.Parent = ScreenGui
-CreditsTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CreditsTab.BackgroundTransparency = 0.000
-CreditsTab.Position = UDim2.new(0.289597005, 0, 0.242884248, 0)
-CreditsTab.Size = UDim2.new(0, 449, 0, 248)
-CreditsTab.Visible = false
+TextLabel_3.Parent = Credits_2
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.Position = UDim2.new(0.672491431, 0, 0.509253621, 0)
+TextLabel_3.Size = UDim2.new(0, 223, 0, 34)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Join Crew Cuz Why Not"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextSize = 14.000
 
--- Scripts:
+TextLabel_4.Parent = Credits_2
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.Position = UDim2.new(0.673020542, 0, 0.343333334, 0)
+TextLabel_4.Size = UDim2.new(0, 224, 0, 50)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = "https://www.youtube.com/channel/UCOnD98PGeYrk6JOZK6tFLUg"
+TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.TextSize = 16.000
+TextLabel_4.TextWrapped = true
 
-local function VEIVU_fake_script() -- Credits.LocalScript 
-	local script = Instance.new('LocalScript', Credits)
-
-	script.Parent.MouseButton1Down:connect(function()
-		script.Parent.Parent.CreditsTab.Visible = true
-		script.Parent.Parent.AnimsTab.Visible = false
-	end)
-end
-coroutine.wrap(VEIVU_fake_script)()
-local function FTTSG_fake_script() -- anims.LocalScript 
-	local script = Instance.new('LocalScript', anims)
-
-	script.Parent.MouseButton1Down:connect(function()
-		script.Parent.Parent.AnimsTab.Visible = true
-		script.Parent.Parent.CreditsTab.Visible = false
-	end)
-end
-coroutine.wrap(FTTSG_fake_script)()
+TextLabel_5.Parent = Credits_2
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.Position = UDim2.new(0.672899604, 0, 0.176166996, 0)
+TextLabel_5.Size = UDim2.new(0, 224, 0, 50)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "Hello Im Iza Or Daily Scripts on Youtube"
+TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextWrapped = true
