@@ -3,17 +3,17 @@
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
-local TextLabel = Instance.new("TextLabel")
-local TextLabel_2 = Instance.new("TextLabel")
-local TextLabel_3 = Instance.new("TextLabel")
-local TextLabel_4 = Instance.new("TextLabel")
-local Credits = Instance.new("TextLabel")
 local noclip = Instance.new("TextButton")
 local fly = Instance.new("TextButton")
 local aimlock = Instance.new("TextButton")
 local Frame_2 = Instance.new("Frame")
 local ImageLabel = Instance.new("ImageLabel")
-local TextLabel_5 = Instance.new("TextLabel")
+local Anims = Instance.new("TextButton")
+local Blatent = Instance.new("TextButton")
+local AnimTab = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local BlatentTab = Instance.new("Frame")
+local TextButton_2 = Instance.new("TextButton")
 
 --Properties:
 
@@ -22,7 +22,7 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
-Frame.Position = UDim2.new(0.117862031, 0, 0.170777977, 0)
+Frame.Position = UDim2.new(0.0755314976, 0, 0.214421242, 0)
 Frame.Size = UDim2.new(0, 725, 0, 300)
 Frame.Active = true
 Frame.Draggable = true
@@ -40,66 +40,13 @@ Title.TextScaled = true
 Title.TextSize = 14.000
 Title.TextWrapped = true
 
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.Position = UDim2.new(0.357581705, 0, 0.615902543, 0)
-TextLabel.Size = UDim2.new(0, 206, 0, 43)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "https://www.roblox.com/groups/7238207/E-hang-out#!/about"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 25.000
-TextLabel.TextWrapped = true
-
-TextLabel_2.Parent = Frame
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.Position = UDim2.new(0.35709098, 0, 0.502586961, 0)
-TextLabel_2.Size = UDim2.new(0, 206, 0, 34)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "Join Crew Cuz Why Not"
-TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.TextSize = 14.000
-
-TextLabel_3.Parent = Frame
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.Position = UDim2.new(0.354823083, 0, 0.340000004, 0)
-TextLabel_3.Size = UDim2.new(0, 206, 0, 50)
-TextLabel_3.Font = Enum.Font.SourceSans
-TextLabel_3.Text = "https://www.youtube.com/channel/UCOnD98PGeYrk6JOZK6tFLUg"
-TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.TextSize = 16.000
-TextLabel_3.TextWrapped = true
-
-TextLabel_4.Parent = Frame
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.Position = UDim2.new(0.357472569, 0, 0.176166996, 0)
-TextLabel_4.Size = UDim2.new(0, 206, 0, 50)
-TextLabel_4.Font = Enum.Font.SourceSans
-TextLabel_4.Text = "Hello Im Iza Or Daily Scripts on Youtube"
-TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_4.TextScaled = true
-TextLabel_4.TextSize = 14.000
-TextLabel_4.TextWrapped = true
-
-Credits.Name = "Credits"
-Credits.Parent = Frame
-Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Credits.Position = UDim2.new(0.357581705, 0, 0.0041619367, 0)
-Credits.Size = UDim2.new(0, 206, 0, 52)
-Credits.Font = Enum.Font.SourceSans
-Credits.Text = "Credits"
-Credits.TextColor3 = Color3.fromRGB(0, 0, 0)
-Credits.TextScaled = true
-Credits.TextSize = 14.000
-Credits.TextWrapped = true
-
 noclip.Name = "noclip"
 noclip.Parent = Frame
 noclip.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 noclip.Position = UDim2.new(-0.000428887724, 0, 0.33851409, 0)
 noclip.Size = UDim2.new(0, 247, 0, 49)
 noclip.Font = Enum.Font.SourceSans
-noclip.Text = "Blatent (faded)"
+noclip.Text = "Faded (Cuz Too Lazy)"
 noclip.TextColor3 = Color3.fromRGB(0, 0, 0)
 noclip.TextScaled = true
 noclip.TextSize = 14.000
@@ -257,13 +204,79 @@ ImageLabel.Position = UDim2.new(0.357100487, 0, 0.762158573, 0)
 ImageLabel.Size = UDim2.new(0, 465, 0, 72)
 ImageLabel.Image = "rbxassetid://8887270221"
 
-TextLabel_5.Parent = Frame
-TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.Position = UDim2.new(0.641379297, 0, 0.00416193623, 0)
-TextLabel_5.Size = UDim2.new(0, 260, 0, 227)
-TextLabel_5.Font = Enum.Font.SourceSans
-TextLabel_5.Text = "How to be legit with this: 1. Have Anim Pack in Da hood 2. Use Fly When Nobody Around| Alright Bye And Aimlock Settings Below Here"
-TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_5.TextScaled = true
-TextLabel_5.TextSize = 14.000
-TextLabel_5.TextWrapped = true
+Anims.Name = "Anims"
+Anims.Parent = Frame
+Anims.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Anims.Position = UDim2.new(0.357100487, 0, 0.00333333341, 0)
+Anims.Size = UDim2.new(0, 206, 0, 50)
+Anims.Font = Enum.Font.SourceSans
+Anims.Text = "Anims"
+Anims.TextColor3 = Color3.fromRGB(0, 0, 0)
+Anims.TextScaled = true
+Anims.TextSize = 14.000
+Anims.TextWrapped = true
+
+Blatent.Name = "Blatent"
+Blatent.Parent = Frame
+Blatent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Blatent.Position = UDim2.new(0.641238391, 0, 0.0033333255, 0)
+Blatent.Size = UDim2.new(0, 260, 0, 50)
+Blatent.Font = Enum.Font.SourceSans
+Blatent.Text = "Blatent"
+Blatent.TextColor3 = Color3.fromRGB(0, 0, 0)
+Blatent.TextScaled = true
+Blatent.TextSize = 14.000
+Blatent.TextWrapped = true
+
+AnimTab.Name = "AnimTab"
+AnimTab.Parent = Frame
+AnimTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AnimTab.BackgroundTransparency = 1.000
+AnimTab.Position = UDim2.new(0.355862081, 0, 0.173333332, 0)
+AnimTab.Size = UDim2.new(0, 467, 0, 176)
+AnimTab.Visible = false
+
+TextButton.Parent = AnimTab
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Size = UDim2.new(0, 206, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+BlatentTab.Name = "BlatentTab"
+BlatentTab.Parent = Frame
+BlatentTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BlatentTab.BackgroundTransparency = 1.000
+BlatentTab.Position = UDim2.new(0.357100457, 0, 0.170000002, 0)
+BlatentTab.Size = UDim2.new(0, 466, 0, 177)
+BlatentTab.Visible = false
+
+TextButton_2.Parent = BlatentTab
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.Position = UDim2.new(1.3097673e-07, 0, 0.0127741061, 0)
+TextButton_2.Size = UDim2.new(0, 205, 0, 48)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextSize = 14.000
+
+-- Scripts:
+
+local function ZESEI_fake_script() -- Anims.LocalScript 
+	local script = Instance.new('LocalScript', Anims)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.AnimTab.Visible = true
+		script.Parent.Parent.BlatentTab.Visible = false
+	end)
+end
+coroutine.wrap(ZESEI_fake_script)()
+
+local function PBLXAD_fake_script() -- Blatent.LocalScript 
+	local script = Instance.new('LocalScript', Blatent)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.AnimTab.Visible = false
+		script.Parent.Parent.BlatentTab.Visible = true
+	end)
+end
+coroutine.wrap(PBLXAD_fake_script)()
